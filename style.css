@@ -1,0 +1,178 @@
+/* -------- RESETS ---------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+html, body {
+    height: 100%;
+}
+body {
+    line-height: 1.5;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+#root, #_next {
+    isolation: isolate;
+}
+
+:root {
+/* dividers */
+    --light-blue-grey: hsl(240, 5%, 91%);
+/* text */
+    --dark-grey-blue: hsl(240, 6%, 50%);
+    --very-dark-grey-blue: hsl(237, 12%, 33%);
+    --soft-red: hsl(14, 88%, 65%);
+    --dark-desaturated-blue: hsl(238, 29%, 16%);
+/* background */
+    --soft-blue: hsl(240, 73%, 65%);
+    --soft-violet: hsl(273, 75%, 66%);
+
+}
+
+/* --------- KEY FRAMES ---------- */
+@keyframes iconDrop {
+    0% {top: -15rem; opacity: 0;}
+    100% {top: -11.4rem; opacity: 1;}
+}
+@keyframes shadowAppear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes hoverIcon {
+    0% {top: -11.4rem;}
+    100% {top: -12.1rem;}
+}
+.icon-main:hover {
+    animation-name: hoverIcon;
+}
+
+/* -------- TYPOGRAPHY --------- */
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    text-align: center;
+    font-size: 1.3rem;
+}
+h1 {
+    font-size: 3.4rem;
+}
+
+/* -------- LAYOUT ----------- */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin: 5rem 3rem;
+    margin-top: 17rem;
+    position: relative;
+}
+.icon-main {
+    position: absolute;
+    top: -11.4rem;
+    width: 75%;
+    animation-name: iconDrop;
+    animation-duration: 2s;
+}
+.shadow-icon-main {
+    animation-name: shadowAppear;
+    animation-duration: 3s;
+    width: 75%;
+}
+h1 {
+    padding-top: 2.6rem;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin: 2rem;
+    margin-bottom: 5rem;
+}
+.questions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    border-bottom: 1px var(--light-blue-grey) solid;
+    padding-bottom: 2rem;
+}
+.questions > img {
+    height: 8px;
+}
+
+/* --------- DESIGN ---------- */
+body {
+    background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
+}
+main {
+    background-color: white;
+    border-radius: 25px;
+}
+section {
+    color: var(--dark-grey-blue);
+}
+.toggle {
+    display: none;
+}
+
+/* -------- MEDIA QUERIES --------- */
+
+
+
+
+
+
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+#### Text
+
+- Very dark desaturated blue: hsl(238, 29%, 16%)
+- Soft red: hsl(14, 88%, 65%)
+
+#### Gradient
+
+Background gradient:
+
+- Soft violet: hsl(273, 75%, 66%)
+- Soft blue: hsl(240, 73%, 65%)
+
+### Neutral
+
+#### Text
+
+- Very dark grayish blue: hsl(237, 12%, 33%)
+- Dark grayish blue: hsl(240, 6%, 50%)
+
+#### Dividers
+
+- Light grayish blue: hsl(240, 5%, 91%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 12px
